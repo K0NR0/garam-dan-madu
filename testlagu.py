@@ -42,7 +42,16 @@ def clear_screen():
         os.system('clear')
 
 def play_music():
-    playsound(r'C:\Users\adeli\Documents\tester\pukimai.mp3')
+    # Dapatkan path folder script ini
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    path = os.path.join(script_dir, "pukimai.mp3")
+    if not os.path.exists(path):
+        print(f"File {path} tidak ditemukan!")
+        return
+    try:
+        playsound(path)
+    except Exception as e:
+        print(f"Error saat memutar lagu: {e}")
 
 if __name__ == "__main__":
 
