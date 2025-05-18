@@ -8,4 +8,15 @@ lirik lagu ini:
 WAJIB
 
 pip install colorama
+
+
+
+
+
+
+
+
+
+
+
 pip install playsound==1.2.2
